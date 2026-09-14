@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
 
     <style>
+        
 
         * {
             margin: 0;
@@ -81,7 +82,48 @@
             color: #a87965;
             margin-bottom: 25px;
         }
+.start-button {
 
+    margin-top:30px;
+
+    padding:15px 40px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:#a87965;
+
+    color:white;
+
+    font-family:inherit;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+    animation:pulse 2s infinite;
+
+}
+
+
+@keyframes pulse {
+
+    0% {
+        transform:scale(1);
+    }
+
+    50% {
+        transform:scale(1.05);
+    }
+
+    100% {
+        transform:scale(1);
+    }
+
+}
         .ring {
             width: 75px;
             height: 75px;
@@ -490,10 +532,12 @@
         <div class="hero-subtitle">
             آغاز یک فصل زیبا از زندگی مشترک
         </div>
-
-        <div class="scroll">
-            برای مشاهده جزئیات ↓
-        </div>
+<div class="scroll">
+    برای مشاهده جزئیات ↓
+</div>
+        <!-- <button class="start-button" onclick="startInvitation()">
+    مشاهده دعوت‌نامه ❤️
+</button> -->
 
     </div>
 
@@ -689,7 +733,8 @@
 
             <iframe
                 id="map"
-            src="https://www.openstreetmap.org/export/embed.html?bbox=48.431393%2C34.778243%2C48.491393%2C34.838243&amp;layer=mapnik&amp;marker=34.808243%2C48.461393"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=48.431393%2C34.778243%2C48.491393%2C34.838243&amp;layer=mapnik&amp;marker=34.808243%2C48.461393"
+
 
                 loading="lazy">
             </iframe>
@@ -920,12 +965,36 @@ function startMusic() {
 
 }
 
+function startInvitation(){
 
+    const music =
+    document.getElementById("backgroundMusic");
+
+
+    music.volume = 0.35;
+
+
+    music.play()
+    .catch(()=>{});
+
+
+    document.querySelector(".invitation")
+    .scrollIntoView({
+
+        behavior:"smooth"
+
+    });
+
+}
 // هر نوع تعامل کاربر
 document.addEventListener("click", startMusic);
 document.addEventListener("touchstart", startMusic);
 document.addEventListener("scroll", startMusic);
-document.addEventListener("mousemove", startMusic);</script>
+document.addEventListener("mousemove", startMusic);
+// ===============================
+// AUTO SCROLL
+// ===============================
+
 let autoScroll = true;
 let scrollSpeed = 3; // سرعت اسکرول (کمتر = آرام‌تر)
 
@@ -982,6 +1051,7 @@ document.addEventListener(
     stopAutoScroll,
     {once:true}
 );
-    </script>
+</script>
+
 </body>
 </html>
