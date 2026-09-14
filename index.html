@@ -898,89 +898,33 @@
 </audio>
 
 <script>
-
 const music = document.getElementById("backgroundMusic");
 
-let musicStarted = false;
+let started = false;
 
-
-/* تلاش برای پخش خودکار */
 function startMusic() {
 
-    if (musicStarted) return;
+    if (started) return;
 
     music.volume = 0.35;
 
     music.play()
-        .then(() => {
-
-            musicStarted = true;
-
-            console.log("Music started automatically");
-
-        })
-        .catch(() => {
-
-            console.log(
-                "Browser blocked autoplay. Waiting for user interaction."
-            );
-
-        });
-}
-
-
-/* اولین تعامل کاربر */
-function startMusicOnInteraction() {
-
-    if (!musicStarted) {
-
-        music.volume = 0.35;
-
-        music.play()
-            .then(() => {
-
-                musicStarted = true;
-
-            })
-            .catch(() => {});
-
-    }
+    .then(() => {
+        started = true;
+        console.log("Music started");
+    })
+    .catch(() => {
+        console.log("Autoplay blocked");
+    });
 
 }
 
 
-/* تلاش هنگام بارگذاری صفحه */
-window.addEventListener("load", () => {
-
-    startMusic();
-
-});
-
-
-/*
-   اگر autoplay توسط مرورگر مسدود شد،
-   با اولین کلیک / لمس / اسکرول موسیقی شروع می‌شود.
-*/
-
-document.addEventListener(
-    "click",
-    startMusicOnInteraction,
-    { once: true }
-);
-
-document.addEventListener(
-    "touchstart",
-    startMusicOnInteraction,
-    { once: true }
-);
-
-document.addEventListener(
-    "scroll",
-    startMusicOnInteraction,
-    { once: true }
-);
-
-</script>
+// هر نوع تعامل کاربر
+document.addEventListener("click", startMusic);
+document.addEventListener("touchstart", startMusic);
+document.addEventListener("scroll", startMusic);
+document.addEventListener("mousemove", startMusic);</script>
 
 </body>
 </html>
