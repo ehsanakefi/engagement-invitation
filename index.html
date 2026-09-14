@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>دعوت‌نامه نامزدی | احسان و آیدا</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Vazirmatn", sans-serif;
+            background: #f8f3ef;
+            color: #3b302c;
+            overflow-x: hidden;
+        }
+
+        /* -------------------------
+           HERO
+        ------------------------- */
+
+        .hero {
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(255,255,255,.95),
+                    rgba(247,235,229,.96)
+                );
+        }
+
+        .hero::before,
+        .hero::after {
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            border: 1px solid rgba(174,126,103,.25);
+        }
+
+        .hero::before {
+            width: 600px;
+            height: 600px;
+        }
+
+        .hero::after {
+            width: 450px;
+            height: 450px;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 30px;
+        }
+
+        .small-title {
+            font-size: 15px;
+            letter-spacing: 4px;
+            color: #a87965;
+            margin-bottom: 25px;
+        }
+
+        .ring {
+            width: 75px;
+            height: 75px;
+            border: 2px solid #b98b76;
+            border-radius: 50%;
+            margin: 0 auto 25px;
+            position: relative;
+        }
+
+        .ring::before {
+            content: "";
+            position: absolute;
+            width: 35px;
+            height: 35px;
+            border: 2px solid #b98b76;
+            border-radius: 50%;
+            top: 17px;
+            left: 17px;
+        }
+
+        .hero h1 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(48px, 9vw, 90px);
+            font-weight: 500;
+            color: #4a3730;
+            direction: ltr;
+            margin-bottom: 15px;
+        }
+
+        .ampersand {
+            color: #b78770;
+            font-size: .65em;
+        }
+
+        .hero-subtitle {
+            font-size: 18px;
+            font-weight: 300;
+            color: #80665b;
+            margin-bottom: 35px;
+        }
+
+        .scroll {
+            font-size: 13px;
+            color: #a87965;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(8px);
+            }
+        }
+
+        /* -------------------------
+           GENERAL
+        ------------------------- */
+
+        section {
+            padding: 90px 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 30px;
+            font-weight: 500;
+            margin-bottom: 15px;
+            color: #4b3932;
+        }
+
+        .section-description {
+            text-align: center;
+            color: #8a7268;
+            margin-bottom: 50px;
+            font-size: 15px;
+        }
+
+        /* -------------------------
+           INVITATION
+        ------------------------- */
+
+        .invitation {
+            background: #fffaf7;
+        }
+
+        .invitation-card {
+            max-width: 750px;
+            margin: auto;
+            text-align: center;
+            padding: 70px 35px;
+            border: 1px solid #eadbd3;
+            position: relative;
+            background: white;
+            box-shadow: 0 20px 60px rgba(95,63,50,.08);
+        }
+
+        .invitation-card::before,
+        .invitation-card::after {
+            content: "❦";
+            position: absolute;
+            color: #c49a87;
+            font-size: 30px;
+        }
+
+        .invitation-card::before {
+            top: 20px;
+            right: 25px;
+        }
+
+        .invitation-card::after {
+            bottom: 20px;
+            left: 25px;
+        }
+
+        .invitation-text {
+            font-size: 19px;
+            line-height: 2.4;
+            color: #5f4c44;
+        }
+
+        .highlight {
+            color: #ad785f;
+            font-weight: 600;
+        }
+
+        /* -------------------------
+           DATE
+        ------------------------- */
+
+        .event {
+            background: #f4ebe6;
+        }
+
+        .event-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .event-item {
+            background: rgba(255,255,255,.8);
+            padding: 35px 20px;
+            text-align: center;
+            border: 1px solid #ead8cf;
+            border-radius: 5px;
+        }
+
+        .event-icon {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .event-label {
+            color: #98766a;
+            font-size: 13px;
+            margin-bottom: 8px;
+        }
+
+        .event-value {
+            font-size: 18px;
+            font-weight: 600;
+            color: #4b3932;
+        }
+
+        /* -------------------------
+           MAP
+        ------------------------- */
+
+        .location {
+            background: #fffaf7;
+        }
+
+        .map-wrapper {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(60,40,30,.12);
+            border: 1px solid #e6d7d0;
+        }
+
+        #map {
+            width: 100%;
+            height: 450px;
+            border: 0;
+        }
+
+        .address-box {
+            background: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .address-box h3 {
+            margin-bottom: 12px;
+            color: #4b3932;
+        }
+
+        .address {
+            color: #806d64;
+            line-height: 2;
+            margin-bottom: 20px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-family: inherit;
+            font-size: 14px;
+            cursor: pointer;
+            border: none;
+            transition: .3s;
+        }
+
+        .button-primary {
+            background: #a87965;
+            color: white;
+        }
+
+        .button-primary:hover {
+            background: #8e6251;
+            transform: translateY(-2px);
+        }
+
+        .button-secondary {
+            background: #f1e7e2;
+            color: #76594d;
+        }
+
+        .button-secondary:hover {
+            background: #e6d7d0;
+        }
+
+        /* -------------------------
+           COUNTDOWN
+        ------------------------- */
+
+        .countdown-section {
+            background: #493831;
+            color: white;
+            text-align: center;
+        }
+
+        .countdown-section .section-title {
+            color: white;
+        }
+
+        .countdown-section .section-description {
+            color: #d7c5bd;
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+
+        .time-box {
+            width: 100px;
+            height: 100px;
+            border: 1px solid rgba(255,255,255,.25);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-radius: 8px;
+            background: rgba(255,255,255,.04);
+        }
+
+        .time-number {
+            font-family: "Playfair Display", serif;
+            font-size: 32px;
+        }
+
+        .time-label {
+            font-size: 12px;
+            color: #d6c5bd;
+            margin-top: 5px;
+        }
+
+        /* -------------------------
+           RSVP
+        ------------------------- */
+
+        .rsvp {
+            background: #f8f0ec;
+            text-align: center;
+        }
+
+        .rsvp-text {
+            max-width: 600px;
+            margin: auto;
+            line-height: 2;
+            color: #725f56;
+        }
+
+        /* -------------------------
+           FOOTER
+        ------------------------- */
+
+        footer {
+            background: #332823;
+            color: #cdbdb6;
+            text-align: center;
+            padding: 45px 20px;
+        }
+
+        footer .names {
+            font-family: "Playfair Display", serif;
+            direction: ltr;
+            font-size: 28px;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        footer p {
+            font-size: 13px;
+        }
+
+        /* -------------------------
+           RESPONSIVE
+        ------------------------- */
+
+        @media(max-width: 700px) {
+
+            section {
+                padding: 65px 15px;
+            }
+
+            .event-grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+            }
+
+            .event-item {
+                padding: 25px;
+            }
+
+            #map {
+                height: 350px;
+            }
+
+            .invitation-card {
+                padding: 55px 25px;
+            }
+
+            .invitation-text {
+                font-size: 16px;
+            }
+
+            .countdown {
+                gap: 8px;
+            }
+
+            .time-box {
+                width: 75px;
+                height: 80px;
+            }
+
+            .time-number {
+                font-size: 25px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="small-title">
+            ENGAGEMENT CEREMONY
+        </div>
+
+        <div class="ring"></div>
+
+        <h1>
+            Aida
+            <span class="ampersand">&</span>
+            Ehsan
+        </h1>
+
+        <div class="hero-subtitle">
+            آغاز یک فصل زیبا از زندگی مشترک
+        </div>
+
+        <div class="scroll">
+            برای مشاهده جزئیات ↓
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     INVITATION
+========================= -->
+
+<section class="invitation">
+
+    <div class="container">
+
+        <div class="invitation-card">
+
+            <div class="invitation-text">
+
+                به نام عشق ❤️
+
+                <br><br>
+
+                با نهایت شادی و افتخار،
+                شما را دعوت می‌کنیم تا در آغاز
+                یکی از زیباترین فصل‌های زندگی ما
+                در کنارمان باشید.
+
+                <br><br>
+
+                حضور گرم شما،
+                این شب را برای ما
+                <span class="highlight">به‌یادماندنی‌تر</span>
+                خواهد کرد.
+
+                <br><br>
+
+                منتظر دیدار شما هستیم.
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     EVENT DETAILS
+========================= -->
+
+<section class="event">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            جزئیات مراسم
+        </h2>
+
+        <p class="section-description">
+            خوشحالیم که این لحظه زیبا را با شما شریک می‌شویم
+        </p>
+
+
+        <div class="event-grid">
+
+            <div class="event-item">
+
+                <div class="event-icon">
+                    📅
+                </div>
+
+                <div class="event-label">
+                    تاریخ
+                </div>
+
+                <div class="event-value">
+                    جمعه 27 شهریور 1405
+                </div>
+
+            </div>
+
+
+            <div class="event-item">
+
+                <div class="event-icon">
+                    🕰️÷
+                </div>
+
+                <div class="event-label">
+                    ساعت
+                </div>
+
+                <div class="event-value">
+                    17:00
+                </div>
+
+            </div>
+
+
+            <div class="event-item">
+
+                <div class="event-icon">
+                    💍
+                </div>
+
+                <div class="event-label">
+                    مراسم
+                </div>
+
+                <div class="event-value">
+                    جشن بله برون
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     COUNTDOWN
+========================= -->
+
+<section class="countdown-section">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            تا شروع جشن
+        </h2>
+
+        <p class="section-description">
+            لحظه‌شماری برای دیدار شما...
+        </p>
+
+
+        <div class="countdown">
+
+            <div class="time-box">
+                <div id="days" class="time-number">00</div>
+                <div class="time-label">روز</div>
+            </div>
+
+            <div class="time-box">
+                <div id="hours" class="time-number">00</div>
+                <div class="time-label">ساعت</div>
+            </div>
+
+            <div class="time-box">
+                <div id="minutes" class="time-number">00</div>
+                <div class="time-label">دقیقه</div>
+            </div>
+
+            <div class="time-box">
+                <div id="seconds" class="time-number">00</div>
+                <div class="time-label">ثانیه</div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     LOCATION
+========================= -->
+
+<section class="location">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            محل برگزاری
+        </h2>
+
+        <p class="section-description">
+            منتظر دیدار شما در این مکان زیبا هستیم
+        </p>
+
+
+        <div class="map-wrapper">
+
+            <!--
+                نقشه
+                مختصات زیر را با مختصات واقعی محل مراسم عوض کنید.
+            -->
+
+            <iframe
+                id="map"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=48.5000%2C34.7500%2C48.5500%2C34.8000&amp;layer=mapnik&amp;marker=34.808243%2C48.461393"
+                loading="lazy">
+            </iframe>
+
+
+            <div class="address-box">
+
+                <h3>
+                   مراسم در باغ
+                </h3>
+
+                <div class="address">
+                    همدان، جاده حیدره کوچه باغ رستوران دیدار کوچه باغ حاج بابایی
+                    <br>
+                    لطفاً برای مسیریابی از دکمه زیر استفاده کنید.
+                </div>
+
+
+                <div class="buttons">
+
+                    <!--
+                        این لینک را با مختصات واقعی تغییر دهید.
+                    -->
+
+                    <a
+                        class="button button-primary"
+                        href="https://www.google.com/maps/dir/?api=1&destination=34.808243,48.461393"
+                        target="_blank">
+
+                        📍 مسیریابی
+
+                    </a>
+
+
+                    <button
+                        class="button button-secondary"
+                        onclick="copyAddress()">
+
+                        📋 کپی آدرس
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     RSVP
+========================= -->
+
+<section class="rsvp">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            حضور شما، افتخار ماست ❤️
+        </h2>
+
+        <p class="rsvp-text">
+
+            از اینکه در این شب خاص در کنار ما خواهید بود
+            بسیار خوشحالیم.
+            حضور شما بهترین هدیه برای آغاز زندگی مشترک ماست.
+
+            <br><br>
+
+            با عشق،
+            <strong>آیدا و احسان</strong>
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="names">
+        Aida & Ehsan
+    </div>
+
+    <p>
+        با عشق، برای همیشه ❤️
+    </p>
+
+</footer>
+
+
+<script>
+
+    /* ==================================
+       COUNTDOWN
+    ================================== */
+
+    /*
+       تاریخ مراسم را اینجا تغییر دهید.
+
+       فرمت:
+       YYYY-MM-DDTHH:MM:SS
+
+       مثال:
+       2026-10-12T19:00:00
+    */
+
+    const eventDate = new Date("2026-09-18T17:00:00").getTime();
+
+
+    function updateCountdown() {
+
+        const now = new Date().getTime();
+
+        const difference = eventDate - now;
+
+
+        if (difference <= 0) {
+
+            document.getElementById("days").innerText = "00";
+            document.getElementById("hours").innerText = "00";
+            document.getElementById("minutes").innerText = "00";
+            document.getElementById("seconds").innerText = "00";
+
+            return;
+
+        }
+
+
+        const days = Math.floor(
+            difference / (1000 * 60 * 60 * 24)
+        );
+
+
+        const hours = Math.floor(
+            (difference / (1000 * 60 * 60)) % 24
+        );
+
+
+        const minutes = Math.floor(
+            (difference / (1000 * 60)) % 60
+        );
+
+
+        const seconds = Math.floor(
+            (difference / 1000) % 60
+        );
+
+
+        document.getElementById("days").innerText =
+            String(days).padStart(2, "0");
+
+        document.getElementById("hours").innerText =
+            String(hours).padStart(2, "0");
+
+        document.getElementById("minutes").innerText =
+            String(minutes).padStart(2, "0");
+
+        document.getElementById("seconds").innerText =
+            String(seconds).padStart(2, "0");
+
+    }
+
+
+    updateCountdown();
+
+    setInterval(updateCountdown, 1000);
+
+
+
+    /* ==================================
+       COPY ADDRESS
+    ================================== */
+
+    function copyAddress() {
+
+        const address =
+            "همدان، جاده حیدره کوچه باغ رستوران دیدار کوچه باغ حاج بابایی";
+
+
+        navigator.clipboard.writeText(address)
+            .then(() => {
+
+                alert("آدرس با موفقیت کپی شد ❤️");
+
+            })
+            .catch(() => {
+
+                alert("امکان کپی آدرس وجود نداشت.");
+
+            });
+
+    }
+
+</script>
+<audio id="backgroundMusic" loop preload="auto">
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+
+const music = document.getElementById("backgroundMusic");
+
+let musicStarted = false;
+
+
+/* تلاش برای پخش خودکار */
+function startMusic() {
+
+    if (musicStarted) return;
+
+    music.volume = 0.35;
+
+    music.play()
+        .then(() => {
+
+            musicStarted = true;
+
+            console.log("Music started automatically");
+
+        })
+        .catch(() => {
+
+            console.log(
+                "Browser blocked autoplay. Waiting for user interaction."
+            );
+
+        });
+}
+
+
+/* اولین تعامل کاربر */
+function startMusicOnInteraction() {
+
+    if (!musicStarted) {
+
+        music.volume = 0.35;
+
+        music.play()
+            .then(() => {
+
+                musicStarted = true;
+
+            })
+            .catch(() => {});
+
+    }
+
+}
+
+
+/* تلاش هنگام بارگذاری صفحه */
+window.addEventListener("load", () => {
+
+    startMusic();
+
+});
+
+
+/*
+   اگر autoplay توسط مرورگر مسدود شد،
+   با اولین کلیک / لمس / اسکرول موسیقی شروع می‌شود.
+*/
+
+document.addEventListener(
+    "click",
+    startMusicOnInteraction,
+    { once: true }
+);
+
+document.addEventListener(
+    "touchstart",
+    startMusicOnInteraction,
+    { once: true }
+);
+
+document.addEventListener(
+    "scroll",
+    startMusicOnInteraction,
+    { once: true }
+);
+
+</script>
+
+</body>
+</html>
