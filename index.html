@@ -926,6 +926,62 @@ document.addEventListener("click", startMusic);
 document.addEventListener("touchstart", startMusic);
 document.addEventListener("scroll", startMusic);
 document.addEventListener("mousemove", startMusic);</script>
+let autoScroll = true;
+let scrollSpeed = 3; // سرعت اسکرول (کمتر = آرام‌تر)
 
+function autoScrollPage() {
+
+    if (autoScroll) {
+
+        window.scrollBy(0, scrollSpeed);
+
+        requestAnimationFrame(autoScrollPage);
+
+    }
+
+}
+
+
+// شروع اسکرول بعد از بارگذاری صفحه
+window.addEventListener("load", () => {
+
+    setTimeout(() => {
+
+        autoScrollPage();
+
+    }, 1500); // بعد از 3 ثانیه شروع شود
+
+});
+
+
+// توقف با اولین تعامل کاربر
+
+function stopAutoScroll(){
+
+    autoScroll = false;
+
+}
+
+
+document.addEventListener(
+    "touchstart",
+    stopAutoScroll,
+    {once:true}
+);
+
+
+document.addEventListener(
+    "mousedown",
+    stopAutoScroll,
+    {once:true}
+);
+
+
+document.addEventListener(
+    "wheel",
+    stopAutoScroll,
+    {once:true}
+);
+    </script>
 </body>
 </html>
